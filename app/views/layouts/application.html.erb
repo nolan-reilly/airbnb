@@ -26,7 +26,10 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
+    <% if controller_name != "registrations" && controller_name != "sessions" %>
+      <%= render "layouts/header" %>
+    <% end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
