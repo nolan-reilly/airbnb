@@ -104,6 +104,8 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
+    faker (3.5.1)
+      i18n (>= 1.8.11, < 2)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -149,6 +151,15 @@ GEM
     marcel (1.0.4)
     mini_mime (1.1.5)
     minitest (5.25.5)
+    monetize (1.13.0)
+      money (~> 6.12)
+    money (6.19.0)
+      i18n (>= 0.6.4, <= 2)
+    money-rails (1.15.0)
+      activesupport (>= 3.0)
+      monetize (~> 1.9)
+      money (~> 6.13)
+      railties (>= 3.0)
     msgpack (1.8.0)
     net-imap (0.5.8)
       date
@@ -355,9 +366,11 @@ DEPENDENCIES
   brakeman
   debug
   devise (~> 4.9, >= 4.9.4)
+  faker (~> 3.5, >= 3.5.1)
   importmap-rails
   jbuilder
   kamal
+  money-rails (~> 1.12)
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
