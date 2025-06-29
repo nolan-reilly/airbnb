@@ -4,10 +4,21 @@
 
       <% @properties.each do |property| %>
         <div class="group relative">
-          <div class="aspect-square w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
+          <!-- Slider main container -->
+          <div class="swiper aspect-square w-full overflow-hidden rounded-md bg-gray-200">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <% property.images.each do |image| %>
+                  <%= image_tag image, class:"swiper-slide property-item-wrapper h-full w-full object-cover object-center" %>
+              <% end %>
+            </div>
 
-            <%= image_tag property.images.first, class:"h-full w-full object-cover object-center" %>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
+
           <div class="mt-2">
             <div class="flex justify-between">
               <h3 class="text-lg font-medium text-gray-700">
